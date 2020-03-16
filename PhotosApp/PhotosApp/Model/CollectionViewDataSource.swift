@@ -11,7 +11,6 @@ import UIKit
 class CollectionViewDataSource: NSObject {
     
     private let count: Int
-    private let cellIdentifier: String = "photoCell"
     
     public init(count: Int) {
         self.count = count
@@ -24,8 +23,11 @@ extension CollectionViewDataSource: UICollectionViewDataSource {
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
-        cell.generateRandomColor()
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: UICollectionViewCell.photosCellIdentifier,
+            for: indexPath
+        )
+        cell.backgroundColor = .randomColor
         return cell
     }
 }
