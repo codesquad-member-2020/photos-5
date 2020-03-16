@@ -9,12 +9,6 @@
 import UIKit
 
 extension UICollectionViewCell {
-    public func generateRandomColor() {
-        let range: Range<CGFloat> = (0..<255)
-        let red: CGFloat = CGFloat.random(in: range) / 255
-        let green: CGFloat = CGFloat.random(in: range) / 255
-        let blue: CGFloat = CGFloat.random(in: range) / 255
-        let alpha: CGFloat = CGFloat.random(in: (0.5..<1))
-        backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
-    }
+    static var photosCellIdentifier: String = "photoCell"
 }
+
