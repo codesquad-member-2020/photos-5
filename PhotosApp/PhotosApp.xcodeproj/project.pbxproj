@@ -13,8 +13,8 @@
 		A5B67576241F7234007A26EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B67575241F7234007A26EB /* Assets.xcassets */; };
 		A5B67579241F7234007A26EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5B67577241F7234007A26EB /* LaunchScreen.storyboard */; };
 		A5B67584241F7234007A26EB /* PhotosAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B67583241F7234007A26EB /* PhotosAppTests.swift */; };
-		A5B6758F241F73AE007A26EB /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6758E241F73AE007A26EB /* PhotosView.swift */; };
-		A5B67591241F748D007A26EB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B67590241F748D007A26EB /* DataManager.swift */; };
+		AE9D8B9A241F7D04002E254B /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D8B99241F7D04002E254B /* CollectionViewDataSource.swift */; };
+		AE9D8B9F241F8336002E254B /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D8B9E241F8336002E254B /* UICollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +38,8 @@
 		A5B6757F241F7234007A26EB /* PhotosAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotosAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B67583241F7234007A26EB /* PhotosAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAppTests.swift; sourceTree = "<group>"; };
 		A5B67585241F7234007A26EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A5B6758E241F73AE007A26EB /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
-		A5B67590241F748D007A26EB /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		AE9D8B99241F7D04002E254B /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
+		AE9D8B9E241F8336002E254B /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +81,14 @@
 		A5B6756B241F7232007A26EB /* PhotosApp */ = {
 			isa = PBXGroup;
 			children = (
+				AE9D8B9D241F831D002E254B /* Extension */,
+				AE9D8B98241F7CF6002E254B /* Model */,
+				AE9D8B94241F7A61002E254B /* View */,
+				AE9D8B95241F7A68002E254B /* Controller */,
 				A5B6756C241F7232007A26EB /* AppDelegate.swift */,
-				A5B67570241F7232007A26EB /* ViewController.swift */,
-				A5B67572241F7232007A26EB /* Main.storyboard */,
 				A5B67575241F7234007A26EB /* Assets.xcassets */,
 				A5B67577241F7234007A26EB /* LaunchScreen.storyboard */,
 				A5B6757A241F7234007A26EB /* Info.plist */,
-				A5B6758E241F73AE007A26EB /* PhotosView.swift */,
-				A5B67590241F748D007A26EB /* DataManager.swift */,
 			);
 			path = PhotosApp;
 			sourceTree = "<group>";
@@ -100,6 +100,38 @@
 				A5B67585241F7234007A26EB /* Info.plist */,
 			);
 			path = PhotosAppTests;
+			sourceTree = "<group>";
+		};
+		AE9D8B94241F7A61002E254B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5B67572241F7232007A26EB /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE9D8B95241F7A68002E254B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A5B67570241F7232007A26EB /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AE9D8B98241F7CF6002E254B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE9D8B99241F7D04002E254B /* CollectionViewDataSource.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE9D8B9D241F831D002E254B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AE9D8B9E241F8336002E254B /* UICollectionViewCell.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,9 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5B67571241F7232007A26EB /* ViewController.swift in Sources */,
-				A5B67591241F748D007A26EB /* DataManager.swift in Sources */,
+				AE9D8B9F241F8336002E254B /* UICollectionViewCell.swift in Sources */,
+				AE9D8B9A241F7D04002E254B /* CollectionViewDataSource.swift in Sources */,
 				A5B6756D241F7232007A26EB /* AppDelegate.swift in Sources */,
-				A5B6758F241F73AE007A26EB /* PhotosView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
