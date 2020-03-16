@@ -14,6 +14,7 @@
 		A5B67579241F7234007A26EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5B67577241F7234007A26EB /* LaunchScreen.storyboard */; };
 		A5B67584241F7234007A26EB /* PhotosAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B67583241F7234007A26EB /* PhotosAppTests.swift */; };
 		A5B6758F241F73AE007A26EB /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6758E241F73AE007A26EB /* PhotosView.swift */; };
+		A5B67591241F748D007A26EB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B67590241F748D007A26EB /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		A5B67583241F7234007A26EB /* PhotosAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAppTests.swift; sourceTree = "<group>"; };
 		A5B67585241F7234007A26EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5B6758E241F73AE007A26EB /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
+		A5B67590241F748D007A26EB /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				A5B67577241F7234007A26EB /* LaunchScreen.storyboard */,
 				A5B6757A241F7234007A26EB /* Info.plist */,
 				A5B6758E241F73AE007A26EB /* PhotosView.swift */,
+				A5B67590241F748D007A26EB /* DataManager.swift */,
 			);
 			path = PhotosApp;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5B67571241F7232007A26EB /* ViewController.swift in Sources */,
+				A5B67591241F748D007A26EB /* DataManager.swift in Sources */,
 				A5B6756D241F7232007A26EB /* AppDelegate.swift in Sources */,
 				A5B6758F241F73AE007A26EB /* PhotosView.swift in Sources */,
 			);

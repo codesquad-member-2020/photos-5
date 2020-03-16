@@ -10,8 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    private var photosView: PhotosView {
+        view as! PhotosView
+    }
+    
+    private let dataManager: DataManager = DataManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        photosView.collectionView.dataSource = dataManager
+        photosView.collectionView.delegate = dataManager
     }
 }
 
