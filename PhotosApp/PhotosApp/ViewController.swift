@@ -9,19 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    var photosView: PhotosView {
-        view as! PhotosView
-    }
-    
-    let dataManager = DataManager()
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    let dataManager = 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        photosView.collectionView.dataSource = dataManager
+        collectionView.delegate = self
+        collectionView.dataSource =
     }
-
-
 }
 
