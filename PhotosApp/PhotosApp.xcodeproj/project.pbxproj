@@ -13,6 +13,8 @@
 		A5B674B6241F43EF007A26EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5B674B5241F43EF007A26EB /* Assets.xcassets */; };
 		A5B674B9241F43EF007A26EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5B674B7241F43EF007A26EB /* LaunchScreen.storyboard */; };
 		A5B674C4241F43F0007A26EB /* PhotosAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B674C3241F43F0007A26EB /* PhotosAppTests.swift */; };
+		A5B674CF241F45BF007A26EB /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B674CE241F45BF007A26EB /* PhotosView.swift */; };
+		A5B674D1241F461C007A26EB /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B674D0241F461C007A26EB /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		A5B674BF241F43F0007A26EB /* PhotosAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotosAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B674C3241F43F0007A26EB /* PhotosAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAppTests.swift; sourceTree = "<group>"; };
 		A5B674C5241F43F0007A26EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5B674CE241F45BF007A26EB /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
+		A5B674D0241F461C007A26EB /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				A5B674B5241F43EF007A26EB /* Assets.xcassets */,
 				A5B674B7241F43EF007A26EB /* LaunchScreen.storyboard */,
 				A5B674BA241F43EF007A26EB /* Info.plist */,
+				A5B674CE241F45BF007A26EB /* PhotosView.swift */,
+				A5B674D0241F461C007A26EB /* DataManager.swift */,
 			);
 			path = PhotosApp;
 			sourceTree = "<group>";
@@ -198,7 +204,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5B674B1241F43EC007A26EB /* ViewController.swift in Sources */,
+				A5B674D1241F461C007A26EB /* DataManager.swift in Sources */,
 				A5B674AD241F43EC007A26EB /* AppDelegate.swift in Sources */,
+				A5B674CF241F45BF007A26EB /* PhotosView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

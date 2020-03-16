@@ -9,9 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var photosView: PhotosView {
+        view as! PhotosView
+    }
+    
+    let dataManager = DataManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        photosView.collectionView.dataSource = dataManager
     }
 
 
