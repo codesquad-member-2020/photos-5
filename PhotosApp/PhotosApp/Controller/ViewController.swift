@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     private let datasource = CollectionViewDataSource(count: 40)
-    private var size: CGSize = CGSize(width: 100, height: 100)
+    private var size: CGSize = CGSize(width: 80, height: 80)
     
     override func viewDidLoad() {
         super.viewDidLoad()
