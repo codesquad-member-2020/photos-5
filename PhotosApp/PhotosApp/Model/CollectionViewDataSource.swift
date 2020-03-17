@@ -23,10 +23,10 @@ extension CollectionViewDataSource: UICollectionViewDataSource {
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(
+        guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: UICollectionViewCell.photosCellIdentifier,
             for: indexPath
-        )
+            ) as? PhotoCell else {return UICollectionViewCell()}
         cell.backgroundColor = .randomColor
         return cell
     }
