@@ -33,20 +33,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="마동석" translatesAutoresizingMaskIntoConstraints="NO" id="U6m-YG-leP">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="마동석" translatesAutoresizingMaskIntoConstraints="NO" id="U6m-YG-leP">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="U6m-YG-leP" secondAttribute="height" multiplier="1:1" id="Ab9-gA-WKA"/>
-                                                        <constraint firstAttribute="width" constant="100" id="E7V-2g-HY9"/>
-                                                    </constraints>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="U6m-YG-leP" firstAttribute="top" secondItem="fvM-Pr-ylA" secondAttribute="top" id="fuN-ia-F3G"/>
-                                                <constraint firstAttribute="bottom" secondItem="U6m-YG-leP" secondAttribute="bottom" id="lDR-VS-UH2"/>
-                                                <constraint firstItem="U6m-YG-leP" firstAttribute="leading" secondItem="fvM-Pr-ylA" secondAttribute="leading" id="rHD-pE-ahn"/>
-                                                <constraint firstAttribute="trailing" secondItem="U6m-YG-leP" secondAttribute="trailing" id="ygD-bD-uhE"/>
-                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="100" height="100"/>
                                     </collectionViewCell>
