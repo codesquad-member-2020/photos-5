@@ -20,19 +20,34 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0DI-xe-bTK">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="160" height="157"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="8AZ-lE-qyf">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="157"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fvM-Pr-ylA">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="157"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="마동석" translatesAutoresizingMaskIntoConstraints="NO" id="U6m-YG-leP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="157"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="U6m-YG-leP" secondAttribute="height" multiplier="1:1" id="Ab9-gA-WKA"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="U6m-YG-leP" firstAttribute="top" secondItem="fvM-Pr-ylA" secondAttribute="top" id="fuN-ia-F3G"/>
+                                                <constraint firstAttribute="bottom" secondItem="U6m-YG-leP" secondAttribute="bottom" id="lDR-VS-UH2"/>
+                                                <constraint firstItem="U6m-YG-leP" firstAttribute="leading" secondItem="fvM-Pr-ylA" secondAttribute="leading" id="rHD-pE-ahn"/>
+                                                <constraint firstAttribute="trailing" secondItem="U6m-YG-leP" secondAttribute="trailing" id="ygD-bD-uhE"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="160" height="157"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -74,4 +89,7 @@
             <point key="canvasLocation" x="138.40000000000001" y="129.98500749625188"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="마동석" width="587" height="377"/>
+    </resources>
 </document>
