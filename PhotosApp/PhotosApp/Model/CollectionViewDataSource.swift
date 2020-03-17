@@ -11,9 +11,9 @@ import Photos
 
 class CollectionViewDataSource: NSObject {
     
-    private let imageManager: PHCachingImageManager!
-    private var fetchResult: PHFetchResult<PHAsset>!
-    private let photoOptions: PHFetchOptions!
+    private let imageManager: PHCachingImageManager
+    private var fetchResult: PHFetchResult<PHAsset>
+    private let photoOptions: PHFetchOptions
     
     public override init() {
         imageManager = PHCachingImageManager()
