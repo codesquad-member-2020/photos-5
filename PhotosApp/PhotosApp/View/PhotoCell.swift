@@ -9,9 +9,10 @@
 import UIKit
 
 class PhotoCell: UICollectionViewCell {
+    
     @IBOutlet weak var imageView: UIImageView!
     
-    func apply(with image: UIImage) {
+    func apply(with image: UIImage?) {
         self.imageView.image = image
     }
 }
