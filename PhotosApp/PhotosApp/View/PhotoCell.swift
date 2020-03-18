@@ -10,7 +10,8 @@ import UIKit
 
 class PhotoCell: UICollectionViewCell {
     
-    @IBOutlet weak var imageView: UIImageView!
+    static var identifier: String = "photoCell"
+    @IBOutlet weak var imageView: UIImageView! 
     
     func apply(with image: UIImage?) {
         self.imageView.image = image
