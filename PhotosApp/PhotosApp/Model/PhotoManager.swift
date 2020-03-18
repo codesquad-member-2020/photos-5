@@ -11,7 +11,7 @@ import Photos
 class PhotoManager {
     
     private let manager: PHCachingImageManager
-    private let fetchResult: PHFetchResult<PHAsset>!
+    private var fetchResult: PHFetchResult<PHAsset>!
     private let fetchOptions: PHFetchOptions
     var count: Int {
         fetchResult.count
@@ -33,5 +33,9 @@ class PhotoManager {
         ) { image, _ in
             cell.apply(with: image)
         }
+    }
+    
+    public func reloadAsset() {
+        fetchResult = PHAsset.fetchAssets(with: fetchOptions)
     }
 }
