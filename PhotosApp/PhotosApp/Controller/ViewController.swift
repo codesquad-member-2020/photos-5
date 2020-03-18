@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     private let datasource = CollectionViewDataSource()
-    private var size: CGSize = CGSize(width: 100, height: 100)
     
     override func viewDidLoad() {
         super.viewDidLoad()
