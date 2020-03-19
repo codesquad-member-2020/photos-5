@@ -7,15 +7,42 @@
 //
 
 import UIKit
+import Photos
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    private let datasource = CollectionViewDataSource(count: 40)
-    private var size: CGSize = CGSize(width: 100, height: 100)
+    private let datasource = CollectionViewDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = datasource
+        authorizationStatus()
+    }
+    
+    func authorizationStatus() {
+        let photoAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
+        
+        switch photoAuthorizationStatus {
+        case .authorized:
+            collectionView.reloadData()
+            
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization { (PHAuthorizationStatus) in
+                switch(PHAuthorizationStatus) {
+                case .authorized :
+                    DispatchQueue.main.async {
+                        self.datasource.reloadAsset()
+                        self.collectionView.reloadData()
+                    }
+                    
+                default:
+                    fatalError("권한 없음")
+                }
+            }
+            
+        default:
+            fatalError("권한 없음")
+        }
     }
 }

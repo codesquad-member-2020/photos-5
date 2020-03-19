@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5709CDA2420C9060067CCDF /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5709CD92420C9060067CCDF /* PhotoCell.swift */; };
 		A5B6756D241F7232007A26EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B6756C241F7232007A26EB /* AppDelegate.swift */; };
 		A5B67571241F7232007A26EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B67570241F7232007A26EB /* ViewController.swift */; };
 		A5B67574241F7232007A26EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5B67572241F7232007A26EB /* Main.storyboard */; };
@@ -14,8 +15,7 @@
 		A5B67579241F7234007A26EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5B67577241F7234007A26EB /* LaunchScreen.storyboard */; };
 		A5B67584241F7234007A26EB /* PhotosAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B67583241F7234007A26EB /* PhotosAppTests.swift */; };
 		AE9D8B9A241F7D04002E254B /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D8B99241F7D04002E254B /* CollectionViewDataSource.swift */; };
-		AE9D8BA1241F89DD002E254B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D8BA0241F89DD002E254B /* UIColor.swift */; };
-		AE9D8BA3241F8AA3002E254B /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9D8BA2241F8AA3002E254B /* UICollectionViewCell.swift */; };
+		AEE181E92420F9FE000A99C4 /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE181E82420F9FE000A99C4 /* PhotoManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A5709CD92420C9060067CCDF /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		A5B67569241F7232007A26EB /* PhotosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B6756C241F7232007A26EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5B67570241F7232007A26EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,8 +41,7 @@
 		A5B67583241F7234007A26EB /* PhotosAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAppTests.swift; sourceTree = "<group>"; };
 		A5B67585241F7234007A26EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE9D8B99241F7D04002E254B /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
-		AE9D8BA0241F89DD002E254B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		AE9D8BA2241F8AA3002E254B /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
+		AEE181E82420F9FE000A99C4 /* PhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				A5B67572241F7232007A26EB /* Main.storyboard */,
+				A5709CD92420C9060067CCDF /* PhotoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -124,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				AE9D8B99241F7D04002E254B /* CollectionViewDataSource.swift */,
+				AEE181E82420F9FE000A99C4 /* PhotoManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -131,8 +133,6 @@
 		AE9D8B9D241F831D002E254B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				AE9D8BA0241F89DD002E254B /* UIColor.swift */,
-				AE9D8BA2241F8AA3002E254B /* UICollectionViewCell.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -240,9 +240,9 @@
 			files = (
 				A5B67571241F7232007A26EB /* ViewController.swift in Sources */,
 				AE9D8B9A241F7D04002E254B /* CollectionViewDataSource.swift in Sources */,
-				AE9D8BA3241F8AA3002E254B /* UICollectionViewCell.swift in Sources */,
+				AEE181E92420F9FE000A99C4 /* PhotoManager.swift in Sources */,
 				A5B6756D241F7232007A26EB /* AppDelegate.swift in Sources */,
-				AE9D8BA1241F89DD002E254B /* UIColor.swift in Sources */,
+				A5709CDA2420C9060067CCDF /* PhotoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
