@@ -10,7 +10,7 @@ import UIKit
 
 class CollectionViewDataSource: NSObject {
     
-    let photoManager = PhotoManager()
+    private let photoManager = PhotoManager()
     
     public func reloadAsset() {
         photoManager.reloadAsset()
