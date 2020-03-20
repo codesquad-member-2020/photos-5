@@ -26,15 +26,19 @@ class PhotoManager: NSObject {
         PHPhotoLibrary.shared().register(self)
     }
     
-    public func load(index: Int, size: CGSize, cell: PhotoCell) {
+    public func load(index: Int, size: CGSize) -> AnyObject? {
+        var image: AnyObject?
+        
         manager.requestImage(
             for: fetchResult[index],
             targetSize: size,
             contentMode: .aspectFill,
             options: .none
-        ) { image, _ in
-            cell.apply(with: image)
+        ) { photo, _ in
+            image = photo
         }
+        
+        return image
     }
     
     public func reloadAsset() {

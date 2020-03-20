@@ -29,7 +29,7 @@ extension CollectionViewDataSource: UICollectionViewDataSource {
             ) as? PhotoCell else { return UICollectionViewCell() }
         let collectionViewIndexPathItem: Int = collectionView.indexPathForItem(at: CGPoint(x: cell.frame.origin.x, y: cell.frame.origin.y))?.item ?? 0
         if collectionViewIndexPathItem == indexPath.item {
-            photoManager.load(index: indexPath.item, size: cell.frame.size, cell: cell)
+            cell.apply(with: photoManager.load(index: indexPath.item, size: cell.frame.size) as? UIImage)
         }
         return cell
     }
