@@ -8,7 +8,7 @@
 
 import Photos
 
-class PhotoManager {
+class PhotoManager: NSObject {
     
     private let manager: PHCachingImageManager
     private var fetchResult: PHFetchResult<PHAsset>!
@@ -17,11 +17,17 @@ class PhotoManager {
         fetchResult.count
     }
     
-    public init() {
+    override public init() {
         manager = PHCachingImageManager()
         fetchOptions = PHFetchOptions()
         fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         fetchResult = PHAsset.fetchAssets(with: fetchOptions)
+        super.init()
+        PHPhotoLibrary.shared().register(self)
+    }
+    
+    func getAsset() -> PHFetchResult<PHAsset>{
+        return fetchResult
     }
     
     public func load(index: Int, size: CGSize, cell: PhotoCell) {
@@ -38,4 +44,34 @@ class PhotoManager {
     public func reloadAsset() {
         fetchResult = PHAsset.fetchAssets(with: fetchOptions)
     }
+}
+
+extension PhotoManager: PHPhotoLibraryChangeObserver {
+    func photoLibraryDidChange(_ changeInstance: PHChange) {
+        if let changes = changeInstance.changeDetails(for: fetchResult) {
+            reloadAsset()
+            if changes.hasIncrementalChanges {
+                if let removed = changes.removedIndexes, removed.count > 0 {
+                    NotificationCenter.default.post(name: Notification.Name.needToAssetReload,
+                                                    object: nil,
+                                                    userInfo: ["removed" : removed])
+                }
+                if let inserted = changes.insertedIndexes, inserted.count > 0 {
+                    NotificationCenter.default.post(name: Notification.Name.needToAssetReload,
+                                                    object: nil,
+                                                    userInfo: ["inserted" : inserted])
+                    
+                }
+                if let changed = changes.changedIndexes, changed.count > 0 {
+                    NotificationCenter.default.post(name: Notification.Name.needToAssetReload,
+                                                    object: nil,
+                                                    userInfo: ["changed" : changed])
+                }
+            }
+        }
+    }
+}
+
+extension Notification.Name {
+    static let needToAssetReload = Notification.Name("needToAssetReload")
 }
