@@ -26,10 +26,6 @@ class PhotoManager: NSObject {
         PHPhotoLibrary.shared().register(self)
     }
     
-    func getAsset() -> PHFetchResult<PHAsset>{
-        return fetchResult
-    }
-    
     public func load(index: Int, size: CGSize, cell: PhotoCell) {
         manager.requestImage(
             for: fetchResult[index],
